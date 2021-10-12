@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-width: 300px;
+  min-height: 100vh;
+  background-image: linear-gradient(135deg, black, grey, black);
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h1 {
+  padding: 10px;
+  color: white;
+  text-align: center;
+  text-shadow: 0px 0px 20px white;
+}
+.screen {
+  width: 100%;
+  max-width: 500px;
+  height: 800px;
+  margin: 0 auto 30px;
+  background: url("../assets/images/bg-screen.jpg");
+  border-radius: 20px;
+  border: 1px solid rgb(114, 73, 114);
+  box-shadow: 0px 5px 20px 0px rgba(255, 255, 255, 0.316);
+}
+.screen__feature {
+  display: flex;
+  justify-content: center;
+  margin: 35px 0 20px;
+}
+.screen__item {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  background: url("../assets/images/clock.svg") center/cover no-repeat;
+  filter: invert(100%);
+}
+.screen__item--cronometer {
+  background-image: url("../assets/images/watch.svg");
+}
+.screen__item--countdown {
+  background-image: url("../assets/images/chevrons-down.svg");
+}
+.screen__scroll {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+.screen__body-container {
+  width: 1500px;
+  margin: 0 50px;
+  display: flex;
+  justify-content: center;
+}
+.screen__body {
+  width: 400px;
+  height: 500px;
+  margin: 20px;
+  scroll-snap-align: center;
+  background-color: rgba(255, 255, 255, .7);
+}

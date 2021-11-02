@@ -1,30 +1,51 @@
 function clock() {
   let clockTime = new Date();
-  let hours = clockTime.getHours();
-  let minutes = clockTime.getMinutes();
-  let seconds = clockTime.getSeconds();
+
+  const hour = document.querySelector("#hour")
+  const minute = document.querySelector("#minute")
+  const second = document.querySelector("#second")
+  const day = document.querySelector("#day")
+  const month = document.querySelector("#month")
+  const date = document.querySelector("#date")
+
+  //number time
+  let whours = clockTime.getHours();
+  let wminutes = clockTime.getMinutes();
+  let wseconds = clockTime.getSeconds();
   
   if (hour < 12){
-    period.textContent = "AM"
+    period.textContent = " a.m."
   }
   else {
-    period.textContent = "PM"
+    period.textContent = " p.m."
   }
 
-  if(hours < 10){
-    hours = '0' + hours;
+  if(whours < 10){
+    whours = '0' + whours;
   }
-  if(minutes < 10){
-    minutes = '0' + minutes;
+  if(wminutes < 10){
+    wminutes = '0' + wminutes;
   }
-  if(seconds < 10){
-    seconds = '0' + seconds;
+  if(wseconds < 10){
+    wseconds = '0' + wseconds;
   }
   
-  hour.textContent = hours
-  minute.textContent = minutes
-  second.textContent = seconds
+  hour.textContent = whours
+  minute.textContent = wminutes
+  second.textContent = wseconds
   
+  //day time
+  let listDays = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+  let listMonths = ['JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'];
+
+  let actualDay = clockTime.getDay();
+  let actualMonth = clockTime.getMonth();
+  let actualDate = clockTime.getDate();
+
+  day.textContent = listDays[actualDay];
+  month.textContent = listMonths[actualMonth];
+  date.textContent = actualDate;
+
   setTimeout(clock,1000);
 }
 clock();

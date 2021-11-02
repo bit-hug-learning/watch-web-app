@@ -1,5 +1,5 @@
 @import './src/css/settings.css';
 
 /* ---- Import your styles after this line ---- */
-
+@import './src/css/watch.css';
 /* @import './src/css/watch.css'; */

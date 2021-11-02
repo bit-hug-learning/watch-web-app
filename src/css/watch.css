@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500&display=swap');
+
+.screen__body--watch {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-family: 'Roboto Mono', monospace;
+
+}
+.screen__body--watch #period{
+  margin-left: 0.5rem;
+}
+.timeweek {
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}

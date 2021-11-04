@@ -17,7 +17,7 @@
     </section>
     <section class="screen__scroll">
       <div class="screen__body-container">
-        <div id="watch" class="screen__body screen__body--watch">
+        <!-- <div id="watch" class="screen__body screen__body--watch">
           <span id="hour">00</span>:
           <span id="minute">00</span>:
           <span id="second">00</span>
@@ -26,12 +26,19 @@
             <span id="day">Day</span>, <span id="month">Month</span> <span id="date">0</span>
           </div>
         </div>
-        <div id="cronometer" class="screen__body screen__body--cronometer"></div>
-        <div id="countdown" class="screen__body screen__body--countdown"></div>
+        <div id="cronometer" class="screen__body screen__body--cronometer"></div> -->
+        <div id="countdown" class="screen__body screen__body--countdown">
+          <input class="countdown__text" type="text">
+          <span class="countdown__span countdown__hours"></span>
+          <span class="countdown__span countdown__minutes"></span>
+          <span class="countdown__span countdown__seconds"></span>
+
+          <span class="countdown__span countdown__date"></span>
+        </div>
       </div>
     </section>
   </section>
-  <script src="./src/scripts/watch.js"></script>
+  <!-- <script src="./src/scripts/watch.js"></script> -->
   <script src="./src/scripts/cronometer.js"></script>
   <script src="./src/scripts/countdown.js"></script>
 </body>

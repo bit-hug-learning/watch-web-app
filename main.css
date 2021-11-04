@@ -2,4 +2,5 @@
 
 /* ---- Import your styles after this line ---- */
 @import './src/css/watch.css';
+@import './src/css/countdown.css';
 /* @import './src/css/watch.css'; */

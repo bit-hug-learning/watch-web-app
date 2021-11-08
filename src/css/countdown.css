@@ -1,12 +1,22 @@
+.screen__body--countdown {
+  padding: 30px;
+}
 input {
   display: block;
 }
 .countdown__span {
   display: inline-block;
-  width: 50px;
-  height: 30px;
-  border: 1px solid black;
 }
-.countdown__date {
-  display: block;
+.countdown__button {
+  width: 120px;
+  height: 40px;
+  background-color: rgb(130, 212, 214);
+  border-radius: 4px;
+  border: 1px solid rgb(1, 140, 133)
+}
+.countdown__button:hover {
+  background-color: rgb(120, 187, 189)
+}
+.countdown__button:active {
+  background-color: rgb(70, 137, 140)
 }

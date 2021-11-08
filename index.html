@@ -28,12 +28,19 @@
         </div>
         <div id="cronometer" class="screen__body screen__body--cronometer"></div> -->
         <div id="countdown" class="screen__body screen__body--countdown">
-          <input class="countdown__text" type="text">
-          <span class="countdown__span countdown__hours"></span>
-          <span class="countdown__span countdown__minutes"></span>
-          <span class="countdown__span countdown__seconds"></span>
+          <label for="timer">Add time in seconds</label>
+          <input class="countdown__text" type="text" id="timer">
+          <button class="countdown__button countdown__button--set">Set timer!</button>
+          <div>
+            <span id="time">00:00:00</span>
+            <!-- <span class="countdown__span countdown__hours">00</span>:
+            <span class="countdown__span countdown__minutes">00</span>:
+            <span class="countdown__span countdown__seconds">00</span> -->
+          </div>
+          <button class="countdown__button countdown__button--start">Start!</button>
+          <button class="countdown__button countdown__button--stop">Stop!</button>
 
-          <span class="countdown__span countdown__date"></span>
+          <!-- <div class="countdown__timer"></div> -->
         </div>
       </div>
     </section>

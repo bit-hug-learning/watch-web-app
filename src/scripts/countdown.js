@@ -11,24 +11,21 @@ let isOn = false;
 
 buttonStart.addEventListener("click", go);
 
-let p = document.createElement("p");
-p.style.fontSize = "2rem";
-let display = text;
-let hours, minutes, seconds;
 function go() {
-  buttonStart.setAttribute("disabled", "true")
-    let duration = input.value;
+  let p = document.createElement("p");
+  p.style.fontSize = "2rem";
+  let display = text;
+  let hours, minutes, seconds;
+  buttonStart.setAttribute("disabled", true);
+  let duration = input.value;
+  let tick;
 
     display.insertAdjacentElement("afterend", p);
     if (input.value != "" && !isNaN(parseInt(input.value))) {
-      let timer = duration
+      let timer = duration;
       p.textContent = "";
 
-      let tick = setInterval(() => {
-        if(isReset) {
-          display.textContent = "00:00:00"
-          clearInterval(tick);
-        } else {
+      tick = setInterval(() => {
           if(!isPaused) {
             hours = parseInt(timer / 3600, 10);
             minutes = parseInt(timer % 3600 / 60 , 10);
@@ -37,7 +34,7 @@ function go() {
             hours = hours < 10 ? "0" + hours : hours;
             minutes = minutes < 10 ? "0" + minutes : minutes;
             seconds = seconds < 10 ? "0" + seconds : seconds;
-    
+            console.log(hours, minutes, seconds)
             display.textContent = `${hours}:${minutes}:${seconds}`;
             
             if (--timer < 0) {
@@ -46,25 +43,31 @@ function go() {
               clearInterval(tick);
             }
           }  
-        }
-      }, 1000)
+             }, 1000)
     } else {
       cont == 0 ?
       p.textContent = "Insert a number" : "";
       cont++;
       }
 
-  buttonPause.addEventListener("click", pause);
+  buttonPause.addEventListener("mouseup", pause);
 
   function pause() {
     isPaused = !isPaused;
+    console.log(isPaused)
     buttonPause.textContent = isPaused ? "Play" : "Pause";
   }
-
+  
   buttonReset.addEventListener("click", reset);
 
   function reset() {
-    isReset = !isReset;
+    isReset = true;
+    isPaused = false;
+    buttonStart.removeAttribute("disabled");
+    display.textContent = "00:00:00";
+    clearInterval(tick);
+    buttonReset.removeEventListener("click", reset);
+    buttonPause.removeEventListener("mouseup", pause);
   }
 
 }

@@ -17,7 +17,7 @@
     </section>
     <section class="screen__scroll">
       <div class="screen__body-container">
-        <!-- <div id="watch" class="screen__body screen__body--watch">
+        <div id="watch" class="screen__body screen__body--watch">
           <span id="hour">00</span>:
           <span id="minute">00</span>:
           <span id="second">00</span>
@@ -26,26 +26,22 @@
             <span id="day">Day</span>, <span id="month">Month</span> <span id="date">0</span>
           </div>
         </div>
-        <div id="cronometer" class="screen__body screen__body--cronometer"></div> -->
+        <div id="cronometer" class="screen__body screen__body--cronometer"></div>
         <div id="countdown" class="screen__body screen__body--countdown">
-          <label for="timer">Add time in seconds</label>
-          <input class="countdown__text" type="text" id="timer">
-          <button class="countdown__button countdown__button--set">Set timer!</button>
-          <div>
-            <span id="time">00:00:00</span>
-            <!-- <span class="countdown__span countdown__hours">00</span>:
-            <span class="countdown__span countdown__minutes">00</span>:
-            <span class="countdown__span countdown__seconds">00</span> -->
+          <div class="countdown__container">
+            <label for="timer">Add time in seconds</label>
+            <input class="countdown__text" type="text">
+            <button class="countdown__button countdown__button--start">Start timer!</button>
+            <span class="time">00:00:00</span>
+            <button class="countdown__button countdown__button--pause">Pause</button>
+            <button class="countdown__button countdown__button--reset">Reset</button>
           </div>
-          <button class="countdown__button countdown__button--start">Start!</button>
-          <button class="countdown__button countdown__button--stop">Stop!</button>
-
-          <!-- <div class="countdown__timer"></div> -->
+          
         </div>
       </div>
     </section>
   </section>
-  <!-- <script src="./src/scripts/watch.js"></script> -->
+  <script src="./src/scripts/watch.js"></script>
   <script src="./src/scripts/cronometer.js"></script>
   <script src="./src/scripts/countdown.js"></script>
 </body>

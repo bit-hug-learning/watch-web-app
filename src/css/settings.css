@@ -9,7 +9,7 @@ body {
   background-image: linear-gradient(135deg, black, grey, black);
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-h1 {
+h1, h2 {
   padding: 10px;
   color: #00ffea;
   text-align: center;
@@ -20,7 +20,8 @@ h1 {
   max-width: 500px;
   height: 800px;
   margin: 0 auto 30px;
-  background: url("../assets/images/bg-screen.jpg");
+  object-fit: cover;
+  background: url("https://i.postimg.cc/vZdrP1Dw/bg-screen.jpg") center/cover no-repeat;
   border-radius: 20px;
   border: 1px solid rgb(114, 73, 114);
   box-shadow: 0px 5px 20px 0px rgba(255, 255, 255, 0.316);
@@ -43,6 +44,9 @@ h1 {
 }
 .screen__item--countdown {
   background-image: url("../assets/images/chevrons-down.svg");
+}
+.icon-selected {
+  filter: brightness(0) saturate(100%) invert(90%) sepia(62%) saturate(2515%) hue-rotate(91deg) brightness(105%) contrast(102%);
 }
 .screen__scroll {
   overflow-x: scroll;

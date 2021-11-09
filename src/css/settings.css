@@ -11,9 +11,9 @@ body {
 }
 h1 {
   padding: 10px;
-  color: white;
+  color: #00ffea;
   text-align: center;
-  text-shadow: 0px 0px 20px white;
+  text-shadow: 0px 0px 20px rgb(23, 216, 230);
 }
 .screen {
   width: 100%;
@@ -36,6 +36,7 @@ h1 {
   margin: 10px;
   background: url("../assets/images/clock.svg") center/cover no-repeat;
   filter: invert(100%);
+  cursor: pointer;
 }
 .screen__item--cronometer {
   background-image: url("../assets/images/watch.svg");
@@ -48,6 +49,22 @@ h1 {
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
+.screen__scroll::-webkit-scrollbar {
+  margin-top: 5px;
+  height: 8px;
+}
+
+.screen__scroll::-webkit-scrollbar-thumb {
+  background: #00ffea;
+  border-radius: 4px;
+}
+.screen__scroll::-webkit-scrollbar-thumb:hover {
+  background: #adfff8;
+}
+.screen__scroll::-webkit-scrollbar-track {
+  background: #05ffea65;
+  border-radius: 4px;
+}
 .screen__body-container {
   width: 1500px;
   margin: 0 50px;
@@ -58,6 +75,7 @@ h1 {
   width: 400px;
   height: 500px;
   margin: 20px;
+  margin-bottom: 30px;
   scroll-snap-align: center;
   background-color: rgba(255, 255, 255, .7);
 }

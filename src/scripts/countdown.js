@@ -8,17 +8,19 @@ let cont = 0;
 let isPaused = false;
 let isReset = false;
 let isOn = false;
+let timeUpCounter = 0;
 
 buttonStart.addEventListener("click", go);
 
 function go() {
   let p = document.createElement("p");
-  p.style.fontSize = "2rem";
   let display = text;
   let hours, minutes, seconds;
-  buttonStart.setAttribute("disabled", true);
   let duration = input.value;
   let tick;
+  timeUpCounter > 0 && text.nextSibling.remove(); 
+  p.style.fontSize = "2rem";
+  buttonStart.setAttribute("disabled", true);
 
     display.insertAdjacentElement("afterend", p);
     if (input.value != "" && !isNaN(parseInt(input.value))) {
@@ -41,6 +43,7 @@ function go() {
               buttonStart.removeAttribute("disabled")
               p.textContent = "Time's up!!"
               clearInterval(tick);
+              timeUpCounter++;
             }
           }  
              }, 1000)

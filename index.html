@@ -27,17 +27,24 @@
             <span id="day">Day</span>, <span id="month">Month</span> <span id="date">0</span>
           </div>
         </div>
-        <div id="cronometer" class="screen__body screen__body--cronometer"></div>
+        <div id="cronometer" class="screen__body screen__body--cronometer">
+          <div class="cronometer__container">
+            <p class="cronometer__time">
+              <span id="hour">00</span>:<span id="min">00</span>:<span id="sec">00</span>:<span id="milisec">00</span>
+            </p>
+            <button class="button cronometer__button--start" id="start">Start</button>
+            <button class="button cronometer__button--reset">Reset</button>
+          </div>
+        </div>
         <div id="countdown" class="screen__body screen__body--countdown">
           <div class="countdown__container">
             <label for="timer">Add time in seconds</label>
             <input class="countdown__text" type="text">
-            <button class="countdown__button countdown__button--start">Start timer!</button>
+            <button class="button countdown__button--start">Start timer!</button>
             <span class="time">00:00:00</span>
-            <button class="countdown__button countdown__button--pause">Pause</button>
-            <button class="countdown__button countdown__button--reset">Reset</button>
+            <button class="button countdown__button--pause">Pause</button>
+            <button class="button countdown__button--reset">Reset</button>
           </div>
-          
         </div>
       </div>
     </section>

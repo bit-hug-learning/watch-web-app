@@ -1,0 +1,13 @@
+.cronometer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.cronometer__time {
+  margin-bottom: 20px;
+}
+.time {
+  font-size: 2.5rem;
+}

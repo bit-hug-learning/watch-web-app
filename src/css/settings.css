@@ -22,7 +22,7 @@ h2 {
   height: 800px;
   margin: 0 auto 30px;
   object-fit: cover;
-  background: url("https://i.postimg.cc/85BDVDYj/bg-screen-1-1-1.jpg") center/cover no-repeat;
+  background: url("../assets/images/bg-screen.jpg") center/cover no-repeat;
   border-radius: 20px;
   border: 1px solid rgb(114, 73, 114);
   box-shadow: 0px 5px 20px 0px rgba(255, 255, 255, 0.316);
